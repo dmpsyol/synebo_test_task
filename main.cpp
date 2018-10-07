@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 #define ARRAY_LENGTH(array) (sizeof((array))/sizeof((array)[0]))
 
@@ -30,6 +31,28 @@ size_t numberUnderFactorial(size_t number)
 
 int main()
 {
+    //Task 1
+    unsigned long long  n, matches = 0;
+    long double length = 0, width = 0;
+
+    while ( true )
+    {
+        cout << "Enter the number of squares: ";
+        cin >> n;
+
+        if( n > 0 ) break;
+
+        else cout << "Number of squares should be greater than zero!" << endl;
+    }
+
+    length = floor( sqrt( n ) );
+    width = ceil( n / length );
+
+    matches = 2 * n + length + width;
+    cout << "Matches necessary: " << matches << endl;
+    return 0;
+
+    //Task 2
     size_t input;
 
     while ( true )
